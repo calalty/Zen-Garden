@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
+header {
+    background: url(/huntington.png);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-size: auto;
+    border: none;
+    margin: -2%;
+    margin-bottom: 5%;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -11,6 +22,7 @@ a {
 p {
     font-family: 'IBM Plex Mono', monospace;
     text-decoration: none;
+    font-size: medium;
 }
 
 h3 {
@@ -25,7 +37,6 @@ h3 {
     font-style: italic; /* changes font style f*/
     font-family: 'Satisfy', cursive; /* changes font style */
     color: rgb(226, 226, 226); /* changes color */
-    background: url(../img/zen.svg); 
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center; /* sorts text to center of page */
@@ -37,15 +48,7 @@ h3 {
     padding: 0em;
     font-size: 1.25em;
 }
-header {
-    background: url(/img/huntington.png);
-    padding-top: 3em;
-    padding-bottom: 3em;
-    background-size: auto;
-    border: none;
-    margin: -2%;
-    margin-bottom: 5%;
-}
+
 .intro h1 {
     font-weight: lighter;
     font-size: 2.25em;
@@ -63,8 +66,14 @@ header {
 
 .summary p {
     position: relative; 
-	top: -50px;
+	margin-top: 5%;
 }
+
+.preamble {
+    position: relative; 
+	margin-top: 5%;
+}
+
 
 .main.supporting {
     position: relative;
@@ -93,13 +102,13 @@ header {
 }
 
 .participation {
-    background: url(/img/bamboo.png); background-color: #84a98c;
+    background: url(/bamboo.png); background-color: #84a98c;
     padding: 0em;
     margin-top: 5%;
 }
 
 .benefits {
-    background: url(/img/bamboo.png); background-color: #84a98c;
+    background: url(/bamboo.png); background-color: #84a98c;
     padding-bottom: 0.25em;
     margin-top: 2.5%;
 }
@@ -114,15 +123,21 @@ header {
 
 .requirements > [role="contentinfo"] {
     background-color: #84a98c;
-    font-size: 2em;
     text-align: center;
-    padding-bottom: 2.5em;
+    padding: 2.5em;
 }
 
-.requirements a {
+[role="contentinfo"] a {
+    font-size: 5em;
     font-family: 'Satisfy', cursive;
     color: white;
     text-decoration: none;
+}
+
+[role="contentinfo"] {
+    font-family: 'IBM Plex Mono', monospace;
+    color:gray;
+    font-size: x-small;
 }
 
 .requirements {
@@ -130,17 +145,14 @@ header {
     font-family: 'Satisfy', cursive;
 }
 
-[footer] a:hover {
-    text-decoration: underline;
-}
+/* footer  */
 
 footer {
-    background: content-box;
     background-color: #52796f;
     text-align: center;
     font-size: 2em;
     word-spacing: 1em;
-    padding: -2.5em;
+    padding: 15px;
     margin-top: -2.5%;
 }
 
@@ -148,24 +160,24 @@ footer a {
     color: white;
 }
 
-/* navigation border */
+footer a:hover { 
+    color:rgb(192, 192, 192);
+}
 
-.sidebar ul {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+/* the columns and grid section below footer  */
+
+.design-selection li {
+    border-bottom: 0.5px solid rgb(170, 170, 170);
 }
 
 .wrapper li {
-    border-bottom: 0.5px solid rgb(170, 170, 170);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1em;
-   
-   }
+}
 
-.design-archives {
-    margin-top: -5%;
-    padding-top: 0em;
+.design-selection {
+    margin-top: -5em;
+    padding-top: 5em;
 }
 
 .design-name {
@@ -178,52 +190,54 @@ footer a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.next, .viewall {
-    font-family: 'IBM Plex Mono', monospace;
-    color: gray;
-}
-
 li {
     display: list-item;
     float: center;
     text-align: center; 
 }
 
+.design-selection h3, .design-archives h3, .zen-resources h3 {
+    display: none;
+}
+
 [role="navigation"] ul{
-    margin-top: -5em;
     column-count: 2;
-    column-gap: -1em;
+    column-gap: -2em;
     column-rule-width: 0em;
     vertical-align: top;
     overflow: hidden;
     text-align: center;
     text-decoration: none;
     list-style: none;
-    background: url(/img/bamboo.png);
     background-color:  #cad2c5 ;
     padding: 5em;
-    width: 100px;
+    width: 100%;
     line-height: 4em;
     display: inline-block;
-    font-family: 'IBM Plex Mono', monospace;
 }
 
 .zen-resources ul{
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(138,188,159,0.5);
+    background-image: url(/Users/codenationstudent/Downloads/mc-2-4-zen-garden-files/img/bamboo.png);
     margin: -2em;
-    margin-top: -3em;
+    margin-top: 0em;
     column-count: 2;
     column-gap: -1em;
-    column-rule-width: 2em;
+    column-rule-width: 1em;
     vertical-align: top;
-    overflow: hidden;
     text-align: center;
     text-decoration: none;
     list-style: none;
-    background: url(/img/bamboo.png); background-color: #84a98c ;
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100px;
+    background: url(/bamboo.png); background-color: #84a98c ;
+    padding: 2em;
     line-height: 4em;
     display: inline-block;
-    font-family: 'IBM Plex Mono', monospace;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
